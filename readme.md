@@ -9,10 +9,10 @@ npm run start
 
 
 
-### Docker run with environment development|test|prod
+### Must use .env
 
 ```
-## loads the file './development|test|prod.env'
+## use '.env'
 
 serverName=192.168.4.103
 databaseName=********
@@ -20,9 +20,6 @@ databaseUser=***
 databaseSecret=***********
 encryption=false
 title=microservice-api
-
-
-. ./start.ps1 -config development|test|prod
 
 ```
 

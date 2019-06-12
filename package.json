@@ -25,5 +25,13 @@
   "devDependencies": {},
   "keywords": [],
   "author": "Jalal.Hejazi <Jalal.Hejazi@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jalalhejazi/nodejs-sqlserver-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jalalhejazi/nodejs-sqlserver-integration/issues"
+  },
+  "homepage": "https://github.com/Jalalhejazi/nodejs-sqlserver-integration#readme"
 }

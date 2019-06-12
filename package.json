@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "private": true,
+  "port": "2222",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "nodemon ./bin/www "
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.0",
+    "hbs": "^4.0.4",
+    "http-errors": "~1.6.2",
+    "morgan": "^1.9.1",
+    "node-fetch": "~2.3.0",
+    "nodemon": "^1.17.5",
+    "tedious": "~2.6.1"
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Jalal.Hejazi <Jalal.Hejazi@gmail.com>",
+  "license": "ISC"
+}

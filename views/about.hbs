@@ -1,0 +1,80 @@
+<div class="jumbotron">
+	<h1 class="display-3">{{title}}</h1>
+
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="https://learning-azure.azurewebsites.net/container-as-a-service/" role="button" target="_blank" title="Learn more about {{title}}">Learn more</a>
+	</p>
+</div>
+
+
+<p>
+	<img src="/images/technology.svg" class="img-fluid img-thumbnail" alt="technology stack">
+	<img src="/images/layers.svg" class="img-fluid img-thumbnail" alt="technology stack">
+</p>
+
+
+<!--
+
+
+function get-product-info {
+<#
+.DESCRIPTION
+    get microservice api hosted on Azure Web app for containers
+.EXAMPLE
+    # 
+    get-product-info 
+    get-product-info | where productCost_USD -lt 10
+    get-product-info | select -First 10 
+    get-product-info | select -First 10 | ConvertTo-Csv -NoTypeInformation
+    get-product-info | select -First 10 | ConvertTo-Json
+    get-product-info | select -First 10 | ConvertTo-Html
+#>
+    $remoteAddress = "http://microservice-api.azurewebsites.net/product/version3"
+    $Data    = Invoke-RestMethod -Uri $remoteAddress
+    write-output $Data
+}
+
+
+
+-->
+
+
+
+<!--
+
+
+function azure_hosting_appsettings {
+  param(
+      $title          ,
+      $serverName     ,
+      $databaseName   ,
+      $databaseUser   , 
+      $databaseSecret ,
+      $transportEncyrption ='true'
+  )
+
+  $resourceGroup  = 'microservices'
+  $webappName     = 'microservice-api'
+  
+  $env00 = "title=$title"
+  $env01 = "serverName=$serverName"
+  $env02 = "databaseName=$databaseName"
+  $env03 = "databaseUser=$databaseUser"
+  $env04 = "databaseSecret=$databaseSecret"
+  $env05 = "encryption=$transportEncyrption"
+  
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env00
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env01
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env02
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env03
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env04
+  az webapp config appsettings set -g $resourceGroup -n $webappName --settings $env05
+  
+
+  # Must restart before changes works online
+  az webapp restart -g $resourceGroup -n $webappName
+}
+
+
+
+-->
